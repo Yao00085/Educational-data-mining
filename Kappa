@@ -1,0 +1,23 @@
+import pandas as pd
+from sklearn import tree
+from sklearn.metrics import cohen_kappa_score
+
+PATH_TO_FINENAME = 'BDEPennW1.csv'
+data = pd.read_csv(PATH_TO_FINENAME)
+data.head()
+
+data.dtypes
+data_dum = pd.get_dummies(data, columns = ['SCHOOL','Class', 'CODER ', 'Activity'])
+data_dum.head()
+
+y = data['ONTASK']
+X = data_dum.drop(columns = ['ONTASK'], axis = 1)
+
+clf = tree.DecisionTreeClassifier(min_samples_split = 10)
+clf.fit(X, y)
+
+predictions = clf.predict(X)
+
+kappa = cohen_kappa_score(y, predictions)
+kappa
+
