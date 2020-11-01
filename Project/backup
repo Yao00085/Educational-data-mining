@@ -1,0 +1,44 @@
+
+# filenames <- list.files(pattern="^[usgs_state]", full.names=TRUE)
+
+# setnames(edu_2010, c(2), c("state_spending"))
+# cleaned_data_edu_2010 <- edu_2010[-c(which(is.na(as.numeric(edu_2010$state_spending)))),] 
+
+# d <- 2010
+# original_data <- read_csv((filenames[[4]]))%>% data.table 
+# setnames(original_data, c(2), c("state_spending"))
+# newdata <- original_data[-c(which(is.na(as.numeric(original_data$state_spending)))),]
+# for(i in 2:ncol(newdata)){
+#     newdata[,i] <- as.numeric(newdata[[i]])
+# }
+
+# newdata[[3]]
+# newdata[which(unlist(lapply(newdata, function(x) !all(is.na(x)))))]
+# new <- newdata[,which(unlist(lapply(newdata, function(x) !all(is.na(x)))))]
+# View(new)
+# 
+# clean_edu_data(original_data)
+
+
+# for (i in 1:length(filenames)) {
+#   original_data <- read_csv(glue(filenames[i])) 
+#   original_data <- original_data[,c(1:4)]
+#   cleaned <- clean_edu_data(original_data)
+#   setnames(cleaned,col_name)
+#   assign(paste0("EduSpending_", d), cleaned, envir = .GlobalEnv) 
+#   d <- d+1
+# } 
+
+
+
+# setnames(edu_2019, c(2), c("state_spending"))
+# new_edu_2019 <- edu_2019[-c(which(is.na(as.numeric(edu_2019$state_spending)))),]
+# for(i in 2:ncol(new_edu_2019)){
+#     new_edu_2019[,i] <- as.numeric(new_edu_2019[,i])
+#     #new_edu_2019 <- Filter(function(x) !all(is.na(x)), new_edu_2019)
+#     #new_edu_2019[,which(unlist(lapply(new_edu_2019, function(x) !all(is.na(x)))))]
+#     #new_edu_2019 <- new_edu_2019[,which(unlist(lapply(new_edu_2019, function(x) !all(is.na(x)))))]
+# }
+# new_edu_2019[,which(unlist(lapply(new_edu_2019, function(x) !all(is.na(x)))))]
+# View(new_edu_2019)
+# #new_edu_2019 %>% select_if(~!all(is.na(.))) 
