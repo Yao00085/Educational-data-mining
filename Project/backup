@@ -42,3 +42,11 @@
 # new_edu_2019[,which(unlist(lapply(new_edu_2019, function(x) !all(is.na(x)))))]
 # View(new_edu_2019)
 # #new_edu_2019 %>% select_if(~!all(is.na(.))) 
+
+
+
+# p_1 <- myplots[[1]];p_2 <- myplots[[2]];p_3 <- myplots[[3]];p_4 <- myplots[[4]]
+# p_5 <- myplots[[5]];p_6 <- myplots[[6]];p_7 <- myplots[[7]];p_8 <- myplots[[8]]
+# p_9 <- myplots[[9]];p_10 <- myplots[[10]];p_11 <- myplots[[11]]
+# ggsave(filename="p_1.png", plot=p_1, device="png",
+#        dpi=500)
